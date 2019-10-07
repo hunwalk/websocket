@@ -1,0 +1,28 @@
+{
+	"name": "hunwalk/yii2-websocket",
+	"description": "Yii2 websocket server component",
+	"type": "yii2-extension",
+	"keywords": ["yii2", "websocket", "component", "ratchet"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Sergey Poltaranin (Consik)",
+			"email": "consigliere.kz@gmail.com"
+		}
+	],
+	"require": {
+		"yiisoft/yii2": "*",
+		"cboden/ratchet": "^0.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"hunwalk\\websocket\\": ""
+		}
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://asset-packagist.org"
+		}
+	]
+}
