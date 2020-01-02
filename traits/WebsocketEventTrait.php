@@ -21,10 +21,10 @@ trait WebsocketEventTrait
 {
     /**
      * @param ConnectionInterface $client
-     * @return ClientEvent
+     * @return ClientEvent|object
      * @throws InvalidConfigException
      */
-    public function getClientEvent(ConnectionInterface $client): ClientEvent
+    public function getClientEvent(ConnectionInterface $client)
     {
         return Yii::createObject(['class' => ClientEvent::class, 'client' => $client]);
     }
@@ -32,10 +32,10 @@ trait WebsocketEventTrait
     /**
      * @param ConnectionInterface $client
      * @param string $message
-     * @return ClientMessageEvent
+     * @return ClientMessageEvent|object
      * @throws InvalidConfigException
      */
-    public function getClientMessageEvent(ConnectionInterface $client, string $message): ClientMessageEvent
+    public function getClientMessageEvent(ConnectionInterface $client, string $message)
     {
         return Yii::createObject(['class' => ClientMessageEvent::class, 'client' => $client, 'message' => $message]);
     }
@@ -43,10 +43,10 @@ trait WebsocketEventTrait
     /**
      * @param ConnectionInterface $client
      * @param Exception $exception
-     * @return ClientErrorEvent
+     * @return ClientErrorEvent|object
      * @throws InvalidConfigException
      */
-    public function getClientErrorEvent(ConnectionInterface $client, Exception $exception): ClientErrorEvent
+    public function getClientErrorEvent(ConnectionInterface $client, Exception $exception)
     {
         return Yii::createObject(['class' => ClientErrorEvent::class, 'client' => $client, 'exception' => $exception]);
     }
