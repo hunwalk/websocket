@@ -6,6 +6,10 @@
 	"license": "MIT",
 	"authors": [
 		{
+			"name": "Gergely Horvath (Hunwalk)",
+			"email": "horg3r@gmail.com"
+		},
+		{
 			"name": "Sergey Poltaranin (Consik)",
 			"email": "consigliere.kz@gmail.com"
 		}

@@ -22,11 +22,11 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require hunwalk/websocket
+composer require hunwalk/yii2-websocket
 ```
 
 or add
 
 ```json
-"hunwalk/websocket": "^1.0"
+"hunwalk/yii2-websocket": "^1.0"
 ```
