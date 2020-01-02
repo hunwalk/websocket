@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace hunwalk\websocket\events;
 
+use Ratchet\ConnectionInterface;
+
 /**
  * Class ClientMessageEvent
  * @package hunwalk\websocket\events
@@ -12,8 +14,14 @@ namespace hunwalk\websocket\events;
  */
 class ClientMessageEvent extends ClientEvent
 {
+
     /**
-     * @var string $message
+     * @var ConnectionInterface $_client
+     */
+    private $_client;
+
+    /**
+     * @var string $_message
      */
     private $_message;
 
@@ -31,5 +39,21 @@ class ClientMessageEvent extends ClientEvent
     public function setMessage($message): void
     {
         $this->_message = $message;
+    }
+
+    /**
+     * @return ConnectionInterface
+     */
+    public function getClient(): ConnectionInterface
+    {
+        return $this->_client;
+    }
+
+    /**
+     * @param ConnectionInterface $client
+     */
+    public function setClient(ConnectionInterface $client): void
+    {
+        $this->_client = $client;
     }
 }
